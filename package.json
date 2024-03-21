@@ -1,8 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "gashawkidane",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Gashaw512.github.io/portfolio/",
+  "homepage": "https://Gashaw512.github.io/gashawkidane/",
   "routes": [
     {
       "src": "/.*",
