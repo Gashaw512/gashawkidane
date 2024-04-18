@@ -9,7 +9,7 @@ const Particle = () => {
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
-  const [particlesContainer, setParticlesContainer] = useState();
+  const [particlesContainer] = useState();
 
   // const particlesLoaded = useCallback((container) => {
   //   setParticlesContainer(container);
