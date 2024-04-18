@@ -2,7 +2,7 @@
   "name": "gashawkidane",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Gashaw512.github.io/gashawkidane/",
+  "homepage": "",
   "routes": [
     {
       "src": "/.*",
