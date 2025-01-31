@@ -9,19 +9,19 @@
     display: grid;
     place-items: center;
     transition: opacity 0.5s ease;
-  }
-  
-  .gk-preloader--hidden {
+}
+
+.gk-preloader--hidden {
     opacity: 0;
     pointer-events: none;
-  }
-  
-  .gk-container {
+}
+
+.gk-container {
     position: relative;
     display: inline-block;
-  }
-  
-  .gk-symbol {
+}
+
+.gk-symbol {
     font-size: 3rem;
     font-weight: bold;
     color: #2c3e50;
@@ -29,28 +29,35 @@
     z-index: 1;
     padding: 20px;
     animation: gkPulse 1.5s infinite ease-in-out;
-  }
-  
-  .gk-spinner {
+}
+
+.gk-spinner {
     position: absolute;
     top: 50%;
     left: 50%;
     width: calc(100% + 40px);
     height: calc(100% + 40px);
     transform: translate(-50%, -50%);
-    border: 6px solid rgba(219, 130, 52, 0.2);  
-    border-top: 6px solid #ff8c00;
-    border-radius: 50%;
     animation: gkSpin 1.5s linear infinite;
-  }
-  
-  @keyframes gkPulse {
+    /* Hexagonal shape */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    /* Gradient border effect */
+    background: conic-gradient(
+        from 0deg at 50% 50%,
+        #ff8c00 0%,
+        #ff8c00 80%,
+        rgba(219, 130, 52, 0.2) 80%,
+        rgba(219, 130, 52, 0.2) 100%
+    );
+}
+
+@keyframes gkPulse {
     0% { transform: scale(1); opacity: 0.8; }
     50% { transform: scale(1.1); opacity: 1; }
     100% { transform: scale(1); opacity: 0.8; }
-  }
-  
-  @keyframes gkSpin {
+}
+
+@keyframes gkSpin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
-  }
+}
