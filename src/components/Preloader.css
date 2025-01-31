@@ -1,4 +1,4 @@
-.ek-preloader {
+.gk-preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -11,46 +11,46 @@
     transition: opacity 0.5s ease;
   }
   
-  .ek-preloader--hidden {
+  .gk-preloader--hidden {
     opacity: 0;
     pointer-events: none;
   }
   
-  .ek-container {
+  .gk-container {
     position: relative;
     display: inline-block;
   }
   
-  .ek-symbol {
+  .gk-symbol {
     font-size: 3rem;
     font-weight: bold;
     color: #2c3e50;
     position: relative;
     z-index: 1;
     padding: 20px;
-    animation: ekPulse 1.5s infinite ease-in-out;
+    animation: gkPulse 1.5s infinite ease-in-out;
   }
   
-  .ek-spinner {
+  .gk-spinner {
     position: absolute;
     top: 50%;
     left: 50%;
     width: calc(100% + 40px);
     height: calc(100% + 40px);
     transform: translate(-50%, -50%);
-    border: 6px solid rgba(219, 191, 52, 0.2);  
+    border: 6px solid rgba(219, 130, 52, 0.2);  
     border-top: 6px solid #ff8c00;
     border-radius: 50%;
-    animation: ekSpin 1.5s linear infinite;
+    animation: gkSpin 1.5s linear infinite;
   }
   
-  @keyframes ekPulse {
+  @keyframes gkPulse {
     0% { transform: scale(1); opacity: 0.8; }
     50% { transform: scale(1.1); opacity: 1; }
     100% { transform: scale(1); opacity: 0.8; }
   }
   
-  @keyframes ekSpin {
+  @keyframes gkSpin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
   }
