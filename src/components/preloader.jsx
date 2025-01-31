@@ -1,23 +1,23 @@
-import React from 'react';
-import $ from 'jquery';
+import React, { useState, useEffect } from 'react';
 
-class Preloader extends React.Component {
-    componentDidMount(){
-        $(window).on('load', function () {
-            if ($('#preloader').length) {
-              $('#preloader').delay(100).fadeOut('slow', function () {
-                $(this).remove();
-              });
-            }
-          });
-    }
+const Preloader = () => {
+  const [isLoading, setIsLoading] = useState(true);
 
-    render(){
-        return <div id="preloader"></div>;
-    }
-}
+  useEffect(() => {
+    // Simulate loading completion
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // Adjust timing to match your actual content load
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className={`preloader ${!isLoading ? 'preloader--hidden' : ''}`}>
+      <div className="preloader__spinner"></div>
+    </div>
+  );
+};
 
 export default Preloader;
-
-
 

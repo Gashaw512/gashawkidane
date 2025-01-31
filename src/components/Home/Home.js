@@ -7,7 +7,7 @@ import HomeAbout from "./HomeAbout";
 const home = () => {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <Container fluid ={true} className="home-section" id="home">
         <Particle />  
         <HomeHead />
         <HomeAbout/>

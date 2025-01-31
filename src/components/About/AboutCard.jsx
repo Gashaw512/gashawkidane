@@ -27,7 +27,7 @@ const AboutCard = () => {
     <Row className="card-container">
       <Card className="card">
         <Card.Header>
-          <Row fluid className="justify-content-center">
+          <Row fluid ="true" className="justify-content-center">
             <div>
               {" "}
               <span className="skill-heading">T</span>{" "}

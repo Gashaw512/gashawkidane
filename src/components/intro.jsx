@@ -4,7 +4,7 @@ class Intro extends React.Component {
   render() {
     return (
       <section>
-        <div id="home" fluid className="bg-image">
+        <div id="home" fluid ="true" className="bg-image">
           <Home />
         </div>
       </section>
